@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Canva Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #8BFFFF, #29A8A8, #59EAEA);
+}
+
+form {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    box-shadow: 0 0 20px rgba(27, 27, 27, 0.27);
+    border-radius: 15px;
+    background-color: #ffffff;
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #1b1b1b;
+    margin-bottom: 25px;
+}
+
+label, p {
+    font-size: 17px;
+    color: #1b1b1b;
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 17px 11px;
+    border: 1px solid #292929;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    background-color: #fafafc;
+    outline: none;
+    color: #1b1b1b;
+    font-size: 17px;
+}
+
+.boton-iniciar {
+    background-color: #58DADA;
+    font-size: 15px;
+    color: #000000;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.boton-iniciar:hover {
+    background-color: #60B4B4;
+}
+
+.olvidar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.recaptcha {
+    margin-bottom: 25px;
+}
+
+.registrese {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+

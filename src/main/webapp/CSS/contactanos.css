@@ -1,0 +1,338 @@
+body {
+    margin: 0;
+}
+
+/* HEADER */
+
+.header_raiz {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.header_iz {
+    display: flex;
+    align-items: center;
+}
+
+.img_logo1 {
+    height: 40px; 
+}
+
+.header_de {
+    display: flex; 
+    align-items: center;
+}
+
+.header_de a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-family: 'Lato', sans-serif; 
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.header_de a i {
+    margin-right: 8px;
+}
+
+.header_de a:hover {
+    color: #08adff;
+}
+
+/* NAVEGACIÓN */
+
+.nav_raiz {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.64); 
+    padding: 10px 20px;
+    width: 100%; 
+    box-sizing: border-box;
+    position: absolute;
+    top: 0; 
+}
+
+.nav_raiz a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900; 
+    margin-left: 70px; 
+}
+
+.nav_raiz a:hover {
+    color: #08adff;
+}
+
+
+
+/* SECCIÓN PRINCIPAL */
+.sec_1 {
+    position: relative;
+    overflow: hidden; 
+    width: 100%; 
+    height: 1000px; 
+}
+
+.img_portada {
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+}
+
+
+.contenido_portada {
+    position: absolute; 
+    top: 20%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: center; 
+    z-index: 1;
+    width: 100%;
+    pointer-events: none; 
+}
+
+.titu_portada{
+    position: absolute; 
+    top: 20%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: center; 
+    z-index: 1; 
+    pointer-events: none;
+}
+
+
+.titu_portada label {
+    color: #fff;
+    font-family: 'Canva Sans', sans-serif;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-size: 30px;
+}
+
+
+.contenedor-titulo {
+    position: absolute; 
+    width: 1000px;
+    height: 500px;
+    bottom: 100px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    background-color: white; 
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+    z-index: 10; 
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #1c2ea4;
+    font-family: 'Canva Sans', sans-serif;
+}
+
+/* Estilos para el formulario */
+.formulario {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Estilos para las cajas de nombre, apellido, email y teléfono */
+.primera-caja, .segunda-caja {
+    display: flex;
+    justify-content: space-between;
+    
+    margin-bottom: 45px; 
+
+}
+.espacio{
+    width: 300px;
+}
+.caja_nombre, .caja_apellido, .caja_email, .caja_telefono {
+    width: 48%; 
+}
+
+/* Estilos para los inputs y textarea */
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 8px 0; 
+    margin-top: 5px;
+    border: none;
+    border-bottom: 2px solid #1c2ea4; 
+    background-color: transparent;
+    outline: none;
+}
+.formulario label{
+    text-align: left;
+    font-weight: bold;
+
+
+}
+
+/* Estilos para el botón de enviar */
+button[type="submit"] {
+    display: block;
+    width: 200px; 
+    padding: 10px 0;
+    margin: 20px auto; 
+    border: none;
+    background-color: #000; 
+    color: #fff; 
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+/* Estilos para la tercera caja (Mensaje) */
+.tercera-caja {
+    margin-bottom: 65px; 
+}
+
+textarea {
+    height: 30px; 
+    resize: none; 
+}
+
+
+
+
+
+
+
+.centered-button {
+    background-color: #00b0ff; 
+    border-radius: 20px; 
+    padding: 20px 20px; 
+    text-align: center; 
+    margin: 0 auto;
+    width: 30%;
+    margin-bottom: 1em;
+    margin-top: 5em;
+    
+}
+
+.centered-button h3 {
+    color: black; 
+    font-weight: bold;
+    margin: 0; 
+    font-size: 30px;
+    font-family: Arial, sans-serif; 
+}
+
+
+.contenedor-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; 
+    align-items: center;
+    justify-items: center;
+}
+
+.contenedor-grid div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-grid img {
+    max-width: 100%;
+    height: auto;
+}
+
+.fut {
+    background-color: rgb(39, 35, 66);
+    padding: 10px 0; 
+}
+
+.iconos {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-right: 20px;
+    margin-bottom: 10px; 
+}
+
+.iconos div {
+    margin: 10px 5px; 
+    width: 40px; 
+}
+
+.iconos div img {
+    width: 100%;
+}
+
+.pie_imagen {
+    width: 200px; 
+    margin-left: 50px;
+    margin-bottom: 10px; 
+}
+
+.pie_imagen img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.boton_fut {
+    background-color: white;
+    text-align: center;
+    padding: 5px 10px; 
+    border-radius: 40px; 
+    width: 150px; 
+    margin-left: 70px;
+    margin-bottom: 10px; 
+}
+
+.boton_fut p {
+    color: black;
+    font-weight: bold;
+    font-size: 14px; 
+    font-family: 'Lato', sans-serif
+
+}
+
+.contenedor_iz {
+    position: relative;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: right;
+    margin-right: 30px;
+    bottom: 5em; 
+}
+
+.iz_1 {
+    margin-bottom: 1em; 
+}
+
+.iz_2 {
+    margin-bottom: 1em; 
+}
+
+.iz_1 h3 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.cont_final {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    bottom: 10px;
+    font-weight: bold;
+    margin-top: 10px; 
+    font-family: 'Lato', sans-serif
+
+}
+
+
