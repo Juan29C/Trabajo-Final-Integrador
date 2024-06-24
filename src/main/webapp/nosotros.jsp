@@ -82,7 +82,7 @@
         <a href="login.jsp">
             <i class="fas fa-sign-in-alt"></i> INICIAR SESIÓN
         </a>
-        <a href="register.jsp">
+        <a href="registroUsuario.jsp">
             <i class="fas fa-user-plus"></i> REGISTRARSE
         </a>
     </div>

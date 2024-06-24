@@ -14,6 +14,7 @@
         <title>Inicio</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="JS/mostrarPacientes.js"></script>
+        <script src="JS/mostrarNoticias.js"></script>
         <script src="JS/mostrar.js"></script>
     </head>
     <body>
@@ -22,14 +23,14 @@
                 <a href="index.jsp"><img class="img_logo1" src="IMG/LogoHeader.png" alt="Logo"></a>
             </div>
             <div class="header_de">
-                <%
-                    HttpSession mySession = request.getSession(false);
-                    Usuario usuario = null;
-                    if (mySession != null) {
-                        usuario = (Usuario) mySession.getAttribute("usuario");
-                    }
-                    if (usuario != null) {
-                %>
+                    <%
+                        HttpSession mySession = request.getSession(false);
+                        Usuario usuario = null;
+                        if (mySession != null) {
+                            usuario = (Usuario) mySession.getAttribute("usuario");
+                        }
+                        if (usuario != null) {
+                    %>
                     <a href="#">
                         <i class="fas fa-user"></i> Hola, <%= usuario.getNombre() %>
                     </a>
@@ -40,7 +41,7 @@
                     <a href="login.jsp">
                         <i class="fas fa-sign-in-alt"></i> INICIAR SESIÓN
                     </a>
-                    <a href="register.jsp">
+                    <a href="registroUsuario.jsp">
                         <i class="fas fa-user-plus"></i> REGISTRARSE
                     </a>
                 <% } %>

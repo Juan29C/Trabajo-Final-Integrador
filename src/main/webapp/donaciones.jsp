@@ -4,6 +4,7 @@
     Author     : DaniSSJ
 --%>
 
+<%@page import="logica.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,10 +16,14 @@
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Canva+Sans:wght@700&display=swap"
               rel="stylesheet">
         <title>Donaciones</title>
-        <link rel="stylesheet" href="CSS/donaciones.css">
-
+        <link rel="stylesheet" href="CSS/donaciones2.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="JS/mostrarPacientes.js"></script>
+        <script src="JS/mostrar.js"></script>
+        <script src="JS/respuestaRecaudo.js"></script>
     </head>
     <body>
+        
         <header class="header_raiz">
             <div class="header_iz">
                 <a href="index.jsp"><img class="img_logo1" src="IMG/LogoHeader.png" alt="Logo"></a>
@@ -27,7 +32,7 @@
                 <a href="login.jsp">
                     <i class="fas fa-sign-in-alt"></i> INICIAR SESIÓN
                 </a>
-                <a href="register.jsp">
+                <a href="registroUsuario.jsp">
                     <i class="fas fa-user-plus"></i> REGISTRARSE
                 </a>
             </div>
@@ -56,149 +61,11 @@
 
             <section class="sec_2">
                 <label class="titu_personas"> PACIENTES </label>
-
-                <div class="caja_personas">
-
-                    <a href="luciana.html" class="caja_solitario">
-                        <div class="imgName_paciente">
-                            <img src="IMG/paciente.png" alt="foto de paciente" />
-                            <h3>Luciana García</h3>
-                        </div>
-                        <div class="txt_ayuda">
-                            <p>Ayuda a Luciana a someterse a una cirugía de corazón</p>
-                        </div>
-                        <div class="info_meta">
-                            <div class="barra_progreso">
-                                <progress max="100" value="35">35%</progress>
-                                <span>35%</span>
-                            </div>
-                            <p class="meta_text">Meta: S/1000</p>
-                        </div>
-                    </a>
-
-                    <a href="luciana.jsp" class="caja_solitario">
-                        <div class="imgName_paciente">
-                            <img src="IMG/paciente.png" alt="foto de paciente" />
-                            <h3>Luciana García</h3>
-                        </div>
-                        <div class="txt_ayuda">
-                            <p>Ayuda a Luciana a someterse a una cirugía de corazón</p>
-                        </div>
-                        <div class="info_meta">
-                            <div class="barra_progreso">
-                                <progress max="100" value="35">35%</progress>
-                                <span>35%</span>
-                            </div>
-                            <p class="meta_text">Meta: S/1000</p>
-                        </div>
-                    </a>
-
-                    <a href="luciana.jsp" class="caja_solitario">
-                        <div class="imgName_paciente">
-                            <img src="IMG/paciente.png" alt="foto de paciente" />
-                            <h3>Luciana García</h3>
-                        </div>
-                        <div class="txt_ayuda">
-                            <p>Ayuda a Luciana a someterse a una cirugía de corazón</p>
-                        </div>
-                        <div class="info_meta">
-                            <div class="barra_progreso">
-                                <progress max="100" value="35">35%</progress>
-                                <span>35%</span>
-                            </div>
-                            <p class="meta_text">Meta: S/1000</p>
-                        </div>
-                    </a>
-
-                    <a href="luciana.jsp" class="caja_solitario">
-                        <div class="imgName_paciente">
-                            <img src="IMG/paciente.png" alt="foto de paciente" />
-                            <h3>Luciana García</h3>
-                        </div>
-                        <div class="txt_ayuda">
-                            <p>Ayuda a Luciana a someterse a una cirugía de corazón</p>
-                        </div>
-                        <div class="info_meta">
-                            <div class="barra_progreso">
-                                <progress max="100" value="35">35%</progress>
-                                <span>35%</span>
-                            </div>
-                            <p class="meta_text">Meta: S/1000</p>
-                        </div>
-                    </a href="luciana.html">
-
-                    <div class="caja_solitario">
-                        <div class="imgName_paciente">
-                            <img src="IMG/paciente.png" alt="foto de paciente" />
-                            <h3>Luciana García</h3>
-                        </div>
-                        <div class="txt_ayuda">
-                            <p>Ayuda a Luciana a someterse a una cirugía de corazón</p>
-                        </div>
-                        <div class="info_meta">
-                            <div class="barra_progreso">
-                                <progress max="100" value="35">35%</progress>
-                                <span>35%</span>
-                            </div>
-                            <p class="meta_text">Meta: S/1000</p>
-                        </div>
-                    </div>
-
-                    <a href="luciana.html" class="caja_solitario">
-                        <div class="imgName_paciente">
-                            <img src="IMG/paciente.png" alt="foto de paciente" />
-                            <h3>Luciana García</h3>
-                        </div>
-                        <div class="txt_ayuda">
-                            <p>Ayuda a Luciana a someterse a una cirugía de corazón</p>
-                        </div>
-                        <div class="info_meta">
-                            <div class="barra_progreso">
-                                <progress max="100" value="35">35%</progress>
-                                <span>35%</span>
-                            </div>
-                            <p class="meta_text">Meta: S/1000</p>
-                        </div>
-                    </a>
-
-                    <a href="luciana.jsp" class="caja_solitario">
-                        <div class="imgName_paciente">
-                            <img src="IMG/paciente.png" alt="foto de paciente" />
-                            <h3>Luciana García</h3>
-                        </div>
-                        <div class="txt_ayuda">
-                            <p>Ayuda a Luciana a someterse a una cirugía de corazón</p>
-                        </div>
-                        <div class="info_meta">
-                            <div class="barra_progreso">
-                                <progress max="100" value="35">35%</progress>
-                                <span>35%</span>
-                            </div>
-                            <p class="meta_text">Meta: S/1000</p>
-                        </div>
-                    </a>
-
-                    <a href="luciana.jsp" class="caja_solitario">
-                        <div class="imgName_paciente">
-                            <img src="IMG/paciente.png" alt="foto de paciente" />
-                            <h3>Luciana García</h3>
-                        </div>
-                        <div class="txt_ayuda">
-                            <p>Ayuda a Luciana a someterse a una cirugía de corazón</p>
-                        </div>
-                        <div class="info_meta">
-                            <div class="barra_progreso">
-                                <progress max="100" value="35">35%</progress>
-                                <span>35%</span>
-                            </div>
-                            <p class="meta_text">Meta: S/1000</p>
-                        </div>
-                    </a>
-
-
+                <div class="caja_personas" id="pacientes">
+                    <!-- Aquí se cargan los pacientes de nuestra BD -->
                 </div>
                 <div class="boton">
-                    <a href="#">VER MÁS</a>
+                    <a href="donaciones.jsp">VER MÁS</a>
                 </div>
             </section>
 
@@ -250,28 +117,46 @@
                     </div>
                     <div class="info_art">
                         <div class="info">
-                            <span>¿Cómo se asignan los fondos para tratamientos médicos?</span>
-                            <span class="mas">+</span>
+                            <div class="pregunta">
+                                <span>¿Cómo se asignan los fondos para tratamientos médicos?</span>
+                                <span class="mas">+</span>
+                            </div>
+                            <div class="respuesta">Los fondos se asignan basándose en una evaluación de necesidades médicas y prioridades.</div>
                         </div>
                         <div class="info">
-                            <span>¿Qué porcentaje de las donaciones se destina a la investigación?</span>
-                            <span class="mas">+</span>
+                            <div class="pregunta">
+                                <span>¿Qué porcentaje de las donaciones se destina a la investigación?</span>
+                                <span class="mas">+</span>
+                            </div>
+                            <div class="respuesta">Un porcentaje significativo, generalmente alrededor del 70%, se destina a la investigación.</div>
                         </div>
                         <div class="info">
-                            <span>¿Cómo se asegura la transparencia en el uso del dinero donado?</span>
-                            <span class="mas">+</span>
+                            <div class="pregunta">
+                                <span>¿Cómo se asegura la transparencia en el uso del dinero donado?</span>
+                                <span class="mas">+</span>
+                            </div>
+                            <div class="respuesta">Implementamos auditorías regulares y publicamos informes detallados.</div>
                         </div>
                         <div class="info">
-                            <span>¿Qué tipo de apoyo reciben los pacientes y sus familias?</span>
-                            <span class="mas">+</span>
+                            <div class="pregunta">
+                                <span>¿Qué tipo de apoyo reciben los pacientes y sus familias?</span>
+                                <span class="mas">+</span>
+                            </div>
+                            <div class="respuesta">Los pacientes y sus familias reciben apoyo financiero, psicológico y logístico.</div>
                         </div>
                         <div class="info">
-                            <span>¿Cómo se eligen los proyectos que reciben financiamiento?</span>
-                            <span class="mas">+</span>
+                            <div class="pregunta">
+                                <span>¿Cómo se eligen los proyectos que reciben financiamiento?</span>
+                                <span class="mas">+</span>
+                            </div>
+                            <div class="respuesta">Los proyectos son seleccionados por un comité de expertos en base a criterios específicos.</div>
                         </div>
                         <div class="info">
-                            <span>¿Qué medidas se toman para garantizar el uso efectivo de los fondos?</span>
-                            <span class="mas">+</span>
+                            <div class="pregunta">
+                                <span>¿Qué medidas se toman para garantizar el uso efectivo de los fondos?</span>
+                                <span class="mas">+</span>
+                            </div>
+                            <div class="respuesta">Se implementan controles estrictos y se realiza un seguimiento continuo del uso de los fondos.</div>
                         </div>
                     </div>
                 </article>
