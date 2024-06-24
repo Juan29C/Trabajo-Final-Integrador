@@ -14,7 +14,7 @@
         <title>Inicio</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="JS/mostrarPacientes.js"></script>
-        <script src="JS/mostrarNoticias.js"></script>
+        <script src="JS/mostrar.js"></script>
     </head>
     <body>
         <header class="header_raiz">
