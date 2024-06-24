@@ -25,20 +25,49 @@
 <body>
 <%
     double totalRecaudado = 0.0;
+    int totalPacientes = 0;
+    int totalDonaciones = 0;
 
     try {
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/ultimoalientodb1", "root", "");
-        String query = "SELECT SUM(monto_recaudado) AS total FROM paciente";
-        PreparedStatement ps = conn.prepareStatement(query);
-        ResultSet rs = ps.executeQuery();
 
-        if (rs.next()) {
-            totalRecaudado = rs.getDouble("total");
+        // Consulta para obtener la suma de monto_recaudado
+        String querySuma = "SELECT SUM(monto_recaudado) AS total FROM paciente";
+        PreparedStatement psSuma = conn.prepareStatement(querySuma);
+        ResultSet rsSuma = psSuma.executeQuery();
+
+        if (rsSuma.next()) {
+            totalRecaudado = rsSuma.getDouble("total");
         }
 
-        rs.close();
-        ps.close();
+        rsSuma.close();
+        psSuma.close();
+
+        // Consulta para obtener el número total de pacientes
+        String queryConteoPacientes = "SELECT COUNT(*) AS total FROM paciente";
+        PreparedStatement psConteoPacientes = conn.prepareStatement(queryConteoPacientes);
+        ResultSet rsConteoPacientes = psConteoPacientes.executeQuery();
+
+        if (rsConteoPacientes.next()) {
+            totalPacientes = rsConteoPacientes.getInt("total");
+        }
+
+        rsConteoPacientes.close();
+        psConteoPacientes.close();
+
+        // Consulta para obtener el número total de donaciones
+        String queryConteoDonaciones = "SELECT COUNT(*) AS total FROM donaciones";
+        PreparedStatement psConteoDonaciones = conn.prepareStatement(queryConteoDonaciones);
+        ResultSet rsConteoDonaciones = psConteoDonaciones.executeQuery();
+
+        if (rsConteoDonaciones.next()) {
+            totalDonaciones = rsConteoDonaciones.getInt("total");
+        }
+
+        rsConteoDonaciones.close();
+        psConteoDonaciones.close();
+
         conn.close();
     } catch (Exception e) {
         e.printStackTrace();
@@ -137,11 +166,11 @@
             <p>soles recaudados</p>
         </div>
         <div>
-            <label id="num">1000</label>
-            <p>personas registradas</p>
+            <label id="num"><%= totalPacientes %></label>
+            <p>Pacientes Registrados</p>
         </div>
         <div>
-            <label id="num">2000</label>
+            <label id="num"><%= totalDonaciones %></label>
             <p>N° de donaciones</p>
         </div>
     </section>
